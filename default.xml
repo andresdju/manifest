@@ -15,10 +15,14 @@
 
   <remote name="fdroid"
 	  fetch="https://gitlab.com/fdroid/"
-	  revision="refs/tags/0.2.8" />
+	  revision="refs/tags/0.2.9" />
 
-  <remote  name="private"
-           fetch="ssh://git@github.com" />
+  <remote name="private"
+	  fetch="ssh://git@github.com" />
+
+  <remote name="andresdju"
+	  fetch="https://github.com/andresdju/" 
+	  revision="replicant-6.0-egl" />
 
   <default revision="refs/heads/cm-13.0"
            remote="lineage-mirror"
@@ -29,7 +33,7 @@
   <project path="build" name="replicant/build.git" remote="replicant" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="manifest" name="replicant/manifest.git" revision="replicant-6.0-dev" remote="replicant" />
+  <project path="manifest" name="manifest.git" revision="replicant-6.0-dev" remote="andresdju" />
   <project path="abi/cpp" name="LineageOS-mirror/android_abi_cpp.git" groups="pdk" />
   <project path="art" name="LineageOS-mirror/android_art.git" groups="pdk" />
   <project path="bionic" name="LineageOS-mirror/android_bionic.git" groups="pdk" />
@@ -155,7 +159,7 @@
   <project path="frameworks/minikin" name="LineageOS-mirror/android_frameworks_minikin.git" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/ml" name="LineageOS-mirror/android_frameworks_ml.git" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/multidex" name="LineageOS-mirror/android_frameworks_multidex.git" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/native" name="replicant/frameworks_native.git" remote="replicant" groups="pdk" />
+  <project path="frameworks/native" name="frameworks_native.git" remote="andresdju" groups="pdk" />
   <project path="frameworks/opt/bitmap" name="LineageOS-mirror/android_frameworks_opt_bitmap.git" groups="pdk-fs" />
   <project path="frameworks/opt/bluetooth" name="LineageOS-mirror/android_frameworks_opt_bluetooth.git" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/calendar" name="LineageOS-mirror/android_frameworks_opt_calendar.git" groups="pdk-cw-fs,pdk-fs" />
@@ -209,7 +213,6 @@
   <project path="packages/apps/CellBroadcastReceiver" name="LineageOS-mirror/android_packages_apps_CellBroadcastReceiver.git" groups="pdk-fs" />
   <project path="packages/apps/CertInstaller" name="LineageOS-mirror/android_packages_apps_CertInstaller.git" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/CMFileManager" name="LineageOS-mirror/android_packages_apps_CMFileManager.git" />
-  <project path="packages/apps/RepWifi" name="replicant/packages_apps_repwifi.git" remote="replicant" />
   <project path="packages/apps/ReplicantWallpapers" name="replicant/packages_apps_replicantwallpapers.git" remote="replicant" />
   <project path="packages/apps/Contacts" name="LineageOS-mirror/android_packages_apps_Contacts.git" groups="pdk-fs" />
   <project path="packages/apps/ContactsCommon" name="LineageOS-mirror/android_packages_apps_ContactsCommon.git" groups="pdk-fs" />
